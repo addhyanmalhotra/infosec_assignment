@@ -1,0 +1,30 @@
+<habac>
+  <device_attributes>A1</device_attributes>
+  <device_attributes>A2</device_attributes>
+  <device_attributes>A371</device_attributes>
+  <device_attributes>B36</device_attributes>
+  <device_attributes>PRD</device_attributes>
+  <devices>hardware</devices>
+  <devices>code</devices>
+  <devices>ppt</devices>
+  <environment_state_attributes>day</environment_state_attributes>
+  <environment_state_attributes>location</environment_state_attributes>
+  <operation_attributes>A1</operation_attributes>
+  <operation_attributes>A2</operation_attributes>
+  <operation_attributes>A371</operation_attributes>
+  <operation_attributes>B36</operation_attributes>
+  <operation_attributes>PRD</operation_attributes>
+  <operations>edit_hw</operations>
+  <operations>write_code</operations>
+  <operations>make_ppt</operations>
+  <sessions>s21</sessions>
+  <sessions>s11</sessions>
+  <sessions>s17</sessions>
+  <subject_attribute_constraints>production_code_cannot_be_force_pushed</subject_attribute_constraints>
+  <subject_attribute_constraints>production_code_cannot_be_force_merged</subject_attribute_constraints>
+  <user_attribute_constraints>TC12: team_members_cant_edit_at_night</user_attribute_constraints>
+  <user_attribute_constraints>TC21: team_leads_can_push_to_prod</user_attribute_constraints>
+  <users>addhyan</users>
+  <users>nishant</users>
+  <users>joshita</users>
+</habac>
