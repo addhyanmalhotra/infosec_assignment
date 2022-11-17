@@ -1,0 +1,25 @@
+<egrbac>
+  <device_roles>A1</device_roles>
+  <device_roles>A2</device_roles>
+  <device_roles>A371</device_roles>
+  <device_roles>B36</device_roles>
+  <device_roles>PRD</device_roles>
+  <devices>hardware</devices>
+  <devices>code</devices>
+  <devices>ppt</devices>
+  <dynamic_seperation_of_duty_constraints>production_code_cannot_be_force_pushed</dynamic_seperation_of_duty_constraints>
+  <dynamic_seperation_of_duty_constraints>production_code_cannot_be_force_merged</dynamic_seperation_of_duty_constraints>
+  <environment_roles>day</environment_roles>
+  <environment_roles>location</environment_roles>
+  <operations>edit_hw</operations>
+  <operations>write_code</operations>
+  <operations>make_ppt</operations>
+  <sessions>s21</sessions>
+  <sessions>s11</sessions>
+  <sessions>s17</sessions>
+  <static_seperation_of_duty_constraints>TC12: team_members_cant_edit_at_night</static_seperation_of_duty_constraints>
+  <static_seperation_of_duty_constraints>TC21: team_leads_can_push_to_prod</static_seperation_of_duty_constraints>
+  <users>addhyan</users>
+  <users>nishant</users>
+  <users>joshita</users>
+</egrbac>
