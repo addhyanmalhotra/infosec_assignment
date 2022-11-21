@@ -6,17 +6,28 @@ application up and running.
 Things you may want to cover:
 
 * Ruby version 
+  
   Ruby 3.0.0
 
 * System dependencies
+  
   Rails 7
 
 * Configuration
+  
   None
   
 * Database creation
-  `rails db:create`
+  ```bash
+  rails db:create
+  ```
   
 * Database initialization
-  `rails db:migrate`
+  ```bash
+  rails db:migrate
+  ```
   
+* Start Server
+  ```bash
+  bin/rails server -p 3000
+  ```
