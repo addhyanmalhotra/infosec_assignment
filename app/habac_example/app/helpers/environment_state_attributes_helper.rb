@@ -1,0 +1,2 @@
+module EnvironmentStateAttributesHelper
+end

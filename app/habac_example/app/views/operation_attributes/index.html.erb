@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Operation attributes</h1>
+
+<div id="operation_attributes">
+  <% @operation_attributes.each do |operation_attribute| %>
+    <%= render operation_attribute %>
+    <p>
+      <%= link_to "Show this operation attribute", operation_attribute %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New operation attribute", new_operation_attribute_path %>

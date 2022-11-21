@@ -1,0 +1,32 @@
+<%= form_with(model: device_attribute) do |form| %>
+  <% if device_attribute.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(device_attribute.errors.count, "error") %> prohibited this device_attribute from being saved:</h2>
+
+      <ul>
+        <% device_attribute.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :name, style: "display: block" %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :values, style: "display: block" %>
+    <%= form.text_field :values %>
+  </div>
+
+  <div>
+    <%= form.label :device_id, style: "display: block" %>
+    <%= form.select :device_id, options_for_select(Device.all.map{|s|[s.name, s.id]}) %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @environment_state_attribute %>
+
+<div>
+  <%= link_to "Edit this environment state attribute", edit_environment_state_attribute_path(@environment_state_attribute) %> |
+  <%= link_to "Back to environment state attributes", environment_state_attributes_path %>
+
+  <%= button_to "Destroy this environment state attribute", @environment_state_attribute, method: :delete %>
+</div>

@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @auth_rule %>
+
+<div>
+  <%= link_to "Edit this auth rule", edit_auth_rule_path(@auth_rule) %> |
+  <%= link_to "Back to auth rules", auth_rules_path %>
+
+  <%= button_to "Destroy this auth rule", @auth_rule, method: :delete %>
+</div>

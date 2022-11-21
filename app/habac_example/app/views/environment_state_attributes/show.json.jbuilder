@@ -1,0 +1,1 @@
+json.partial! "environment_state_attributes/environment_state_attribute", environment_state_attribute: @environment_state_attribute

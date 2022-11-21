@@ -1,0 +1,32 @@
+<%= form_with(model: environment_state_attribute) do |form| %>
+  <% if environment_state_attribute.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(environment_state_attribute.errors.count, "error") %> prohibited this environment_state_attribute from being saved:</h2>
+
+      <ul>
+        <% environment_state_attribute.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :name, style: "display: block" %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :values, style: "display: block" %>
+    <%= form.text_field :values %>
+  </div>
+
+  <div>
+    <%= form.label :environment_state_id, style: "display: block" %>
+    <%= form.select :environment_state_id,  options_for_select(EnvironmentState.all.map{|s|[s.name, s.id]}) %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

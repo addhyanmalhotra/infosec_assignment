@@ -1,0 +1,57 @@
+<%= form_with(model: auth_rule) do |form| %>
+  <% if auth_rule.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(auth_rule.errors.count, "error") %> prohibited this auth_rule from being saved:</h2>
+
+      <ul>
+        <% auth_rule.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :ua, "User Attribute", style: "display: block" %>
+    <%= form.select :ua, options_for_select(UserAttribute.pluck(:name).uniq<< nil ) %>
+  </div>
+
+  <div>
+    <%= form.label :uav, style: "display: block" %>
+    <%= form.select :uav, options_for_select(UserAttribute.pluck(:values).uniq << nil ) %>
+  </div>
+
+  <div>
+    <%= form.label :da, style: "display: block" %>
+    <%= form.select :da, options_for_select(DeviceAttribute.pluck(:name).uniq<< nil ) %>
+  </div>
+
+  <div>
+    <%= form.label :dav, style: "display: block" %>
+    <%= form.select :dav, options_for_select(DeviceAttribute.pluck(:values).uniq << nil ) %>
+  </div>
+
+  <div>
+    <%= form.label :oa, style: "display: block" %>
+    <%= form.select :oa, options_for_select(OperationAttribute.pluck(:name).uniq<< nil ) %>
+  </div>
+
+  <div>
+    <%= form.label :oav, style: "display: block" %>
+    <%= form.select :oav, options_for_select(OperationAttribute.pluck(:values).uniq << nil ) %>
+  </div>
+
+  <div>
+    <%= form.label :esa, style: "display: block" %>
+    <%= form.select :esa, options_for_select(EnvironmentStateAttribute.pluck(:name).uniq << nil) %>
+  </div>
+
+  <div>
+    <%= form.label :esav, style: "display: block" %>
+    <%= form.text_field :esav %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

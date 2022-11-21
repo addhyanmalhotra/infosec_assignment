@@ -1,0 +1,94 @@
+
+<div class="row mx-4">
+<div class="card mt-4 border-left-success shadow h-100 py-2 mx-2 col-2">
+    <div class="card-body">
+        <div class="row no-gutters align-items-center">
+            <div class="col mr-2">
+                <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                    Time
+                </div>
+                <div class="h5 mb-0 font-weight-bold text-gray-800"><%= Time.now.hour %> hours</div>
+            </div>
+            <div class="col-auto">
+                <i class="fas fa-clock fa-2x text-gray-300"></i>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="card mt-4 border-left-warning shadow h-100 mx-2 py-2 col-2">
+    <div class="card-body">
+        <div class="row no-gutters align-items-center">
+            <div class="col mr-2">
+                <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
+                    Day of the week
+                </div>
+                <div class="h5 mb-0 font-weight-bold text-gray-800">Day <%= Time.now.wday %></div>
+            </div>
+            <div class="col-auto">
+                <i class="fas fa-calendar fa-2x text-gray-300"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="card mt-4 border-left-primary shadow h-100 mx-2 py-2 col-2">
+    <div class="card-body">
+        <div class="row no-gutters align-items-center">
+            <div class="col mr-2">
+                <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                    Parent in kitchen
+                </div>
+                <div class="h5 mb-0 font-weight-bold text-gray-800"><%= EnvironmentStateAttribute.find_by_name("parent_in_kitchen").values == "true" ? "Yes" : "No" %></div>
+            </div>
+            <div class="col-auto">
+                <i class="fas fa-user fa-2x text-gray-300"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="card mt-4 mt-4 border-left-info shadow h-100 mx-2 py-2 col-4">
+    <div class="card-body">
+        <div class="row no-gutters align-items-center">
+            <div class="col mr-2">
+                <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
+                    Current User
+                </div>
+                <div class="h5 mb-0 font-weight-bold text-gray-800"><%= current_user.email %></div>
+            </div>
+            <div class="col-auto">
+                <i class="fas fa-user fa-2x text-gray-300"></i>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<div class="m-4 card shadow p-0 col-6">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Accessible Operations</h6>
+    </div>
+    <div class="card-body">
+        <table id="example"  class="table table-striped">
+            <thead>
+                <tr>
+                    <th> Device </th>
+                    <th> Operation </th>
+                </tr>
+            </thead>
+            <tbody>
+                <% @allowed_ops.each do |op| %>
+                    <tr>
+                        <td><%= op.device.name%></td>
+                        <td><%= op.name%></td>
+                    </tr>
+                <% end%>
+            </tbody>
+        <table>
+    </div>
+</div>
+<script>
+$(document).ready(function () {
+    $('#example').DataTable();
+});
+</script>

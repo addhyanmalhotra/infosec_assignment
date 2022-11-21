@@ -1,0 +1,23 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  operation: one
+  ua: MyString
+  uav: MyString
+  da: MyString
+  dav: MyString
+  oa: MyString
+  oav: MyString
+  esa: MyString
+  esav: MyString
+
+two:
+  operation: two
+  ua: MyString
+  uav: MyString
+  da: MyString
+  dav: MyString
+  oa: MyString
+  oav: MyString
+  esa: MyString
+  esav: MyString

@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Environment state attributes</h1>
+
+<div id="environment_state_attributes">
+  <% @environment_state_attributes.each do |environment_state_attribute| %>
+    <%= render environment_state_attribute %>
+    <p>
+      <%= link_to "Show this environment state attribute", environment_state_attribute %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New environment state attribute", new_environment_state_attribute_path %>

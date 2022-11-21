@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @device_attribute %>
+
+<div>
+  <%= link_to "Edit this device attribute", edit_device_attribute_path(@device_attribute) %> |
+  <%= link_to "Back to device attributes", device_attributes_path %>
+
+  <%= button_to "Destroy this device attribute", @device_attribute, method: :delete %>
+</div>

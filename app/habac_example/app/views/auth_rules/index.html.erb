@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Auth rules</h1>
+
+<div id="auth_rules">
+  <% @auth_rules.each do |auth_rule| %>
+    <%= render auth_rule %>
+    <p>
+      <%= link_to "Show this auth rule", auth_rule %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New auth rule", new_auth_rule_path %>
